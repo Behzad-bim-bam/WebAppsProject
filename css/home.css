@@ -162,6 +162,18 @@ body {
     margin: 0;
 }
 
+.feature-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block; /* Makes the anchor take up the full width/height of the column */
+    height: 100%;
+}
+
+.feature-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 /* CTA strip */
 .cta-strip {
     background: var(--cl-primary);

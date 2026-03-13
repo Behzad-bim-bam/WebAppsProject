@@ -1,8 +1,9 @@
 // Mock Data
 const courses = [
-    { id: 1, name: "CS101: Intro to Programming", dept: "Computer Science", enrolled: true },
-    { id: 2, name: "MATH202: Calculus II", dept: "Mathematics", enrolled: false },
-    { id: 3, name: "ENG105: Academic Writing", dept: "English", enrolled: true }
+    { id: 1, name: "CMP120: Intro to Programming", dept: "Computer Science", enrolled: true },
+    { id: 2, name: "MTH104: Calculus II", dept: "Mathematics", enrolled: false },
+    { id: 3, name: "ENG204: Academic Writing", dept: "English", enrolled: true },
+    { id: 4, name: "CMP257: Web Application Programming", dept: "Computer Science", enrolled: true}
 ];
 
 const cardContainer = document.getElementById('course-card-container');
