@@ -93,3 +93,40 @@ body {
     .app-sidebar .nav { flex-direction: row; flex-wrap: wrap; gap: 0.25rem; }
     .app-sidebar .nav-link { border-radius: 8px; }
 }
+
+/* Shared Background for Auth Pages */
+.auth-page { 
+    min-height: calc(100vh - 72px); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 2rem;
+    /* This matches the dark blue professional theme from your Home.html */
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+}
+
+/* Global Navbar Styling (Matches Home.html) */
+.navbar {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background-color: #ffffff !important;
+}
+
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--cl-primary);
+}
+
+/* Auth Card Styling (Shared by Login and Signup) */
+.auth-card { 
+    max-width: 440px; 
+    width: 100%; 
+    z-index: 2;
+}
+
+.auth-card .card { 
+    border-radius: 20px; 
+    border: none; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+    padding: 2rem;
+}

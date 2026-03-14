@@ -15,14 +15,48 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg app-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="Home.html">
-                <img src="Images/web-logo.png" alt="CourseLink" width="40" height="36" class="me-2">
-                <span class="fw-bold">CourseLink</span>
+                <img src="Images/web-logo.png" alt="CourseLink" width="48" height="42" class="me-2">
+                <span class="fw-bold text-dark">CourseLink</span>
             </a>
-            <div class="ms-auto" id="auth-status">
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Evaluate.html">Evaluate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Materials.html">Materials</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Share</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Materials.html">Class Notes</a></li>
+                            <li><a class="dropdown-item" href="Materials.html">YouTube Links</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">About us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-primary btn-sm me-1" href="Login.html">Login</a>
+                        <a class="btn btn-accent btn-sm" href="SignUp.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
