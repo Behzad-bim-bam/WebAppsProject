@@ -52,3 +52,20 @@ document.getElementById('courseSearch').addEventListener('input', (e) => {
 
 // Initial Load
 renderCourses();
+
+// Add this at the very bottom of your materials.js
+
+window.addEventListener('DOMContentLoaded', () => {
+    // 1. Get the course name from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const courseToOpen = urlParams.get('course');
+
+    if (courseToOpen) {
+        // 2. Use your existing showCourse function to reveal the detail section
+        showCourse(courseToOpen);
+        
+        // 3. Optional: If you want to ensure the course exists in your mock data
+        // You can add a check here, but showCourse(courseToOpen) will work 
+        // as long as the name matches what you passed in the URL.
+    }
+});

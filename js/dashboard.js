@@ -29,9 +29,7 @@ dashboardData.courses.forEach(course => {
                 <h5 class="fw-bold mb-0">${course.title}</h5>
                 <p class="text-muted small mb-0">${course.code}</p>
             </div>
-            <a href="Materials.html" class="btn btn-outline-primary btn-sm ms-auto rounded-pill px-4">
-                View
-            </a>
+            <a href="Materials.html?course=${encodeURIComponent(course.name)}" class="btn btn-outline-primary btn-sm ms-auto rounded-pill px-4">View</a>
         </div>
     `;
 });

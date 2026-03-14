@@ -27,7 +27,7 @@ function renderMyCourses() {
                     </div>
 
                     <div class="course-actions mt-auto">
-                        <a href="Materials.html" class="btn btn-sm btn-outline-primary flex-grow-1">Materials</a>
+                        <a href="Materials.html?course=${encodeURIComponent(course.name)}" class="btn btn-sm btn-outline-primary flex-grow-1">Materials</a>
                         <a href="Evaluate.html" class="btn btn-sm btn-primary flex-grow-1">Track Grades</a>
                     </div>
                 </div>
