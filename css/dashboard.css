@@ -91,3 +91,33 @@
 }
 
 .w-fit { width: fit-content; }
+
+/* Styling for the Grade Badge in My Courses */
+.grade-badge {
+    background: #ebf4ff;
+    color: var(--cl-primary);
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.course-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.course-meta span {
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.course-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #edf2f7;
+    display: flex;
+    gap: 10px;
+}
