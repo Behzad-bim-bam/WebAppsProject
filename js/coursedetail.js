@@ -104,11 +104,14 @@ const matchedCourse = Object.keys(gradeDistributions).find(
 if (matchedCourse) {
     distTable.innerHTML = "";
 
-    gradeDistributions[matchedCourse].forEach(item => {
+    gradeDistributions[matchedCourse].forEach((item, index) => {
         distTable.innerHTML += `
                 <tr>
                     <td>
-                        ${item.name}
+                        <a href="Materials.html?course=${encodeURIComponent(courseName)}&assessment=${index}" 
+                           class="text-decoration-none fw-bold text-primary">
+                            ${item.name}
+                        </a>
                         <span class="badge bg-light text-dark ms-2">
                             <a href="Calendar.html?date=${item.date}" 
                                onclick="event.stopPropagation()" 

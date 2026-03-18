@@ -247,13 +247,17 @@ window.addEventListener('DOMContentLoaded', () => {
     // 1. Get the course name from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const courseToOpen = urlParams.get('course');
+    const assessmentToShow = urlParams.get('assessment');
 
     if (courseToOpen) {
         // 2. Use your existing showCourse function to reveal the detail section
         showCourse(courseToOpen);
-        
-        // 3. Optional: If you want to ensure the course exists in your mock data
-        // You can add a check here, but showCourse(courseToOpen) will work 
-        // as long as the name matches what you passed in the URL.
+
+        // 3. If assessment parameter is present, show assessment details
+        if (assessmentToShow !== null) {
+            setTimeout(() => {
+                showAssessmentDetails(courseToOpen, parseInt(assessmentToShow));
+            }, 100); // Small delay to ensure DOM is ready
+        }
     }
 });
