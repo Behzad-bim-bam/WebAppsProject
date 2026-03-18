@@ -3,7 +3,7 @@
     height: 70px;
     border-bottom: 1px solid #edf2f7;
     z-index: 1050;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 .app-container {
@@ -77,7 +77,7 @@
 
 .course-entry:hover {
     border-color: var(--cl-primary);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* Alert Boxes */
@@ -90,7 +90,9 @@
     border-left: 4px solid var(--cl-accent);
 }
 
-.w-fit { width: fit-content; }
+.w-fit {
+    width: fit-content;
+}
 
 /* Styling for the Grade Badge in My Courses */
 .grade-badge {
@@ -121,6 +123,7 @@
     display: flex;
     gap: 10px;
 }
+
 .post {
     border-left: 3px solid #dee2e6;
     padding-left: 10px;
@@ -145,7 +148,20 @@
 }
 
 #calendar {
-            background: white;
-            padding: 15px;
-            border-radius: 12px;
-        }
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.user-avatar {
+    background: #0d6efd;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+}
