@@ -50,6 +50,19 @@ document.getElementById('courseSearch').addEventListener('input', (e) => {
     renderCourses('all', e.target.value);
 });
 
+// Filter Buttons Logic
+document.getElementById('all-courses-btn').addEventListener('click', () => {
+    document.getElementById('all-courses-btn').classList.add('active');
+    document.getElementById('my-courses-btn').classList.remove('active');
+    renderCourses('all', document.getElementById('courseSearch').value);
+});
+
+document.getElementById('my-courses-btn').addEventListener('click', () => {
+    document.getElementById('my-courses-btn').classList.add('active');
+    document.getElementById('all-courses-btn').classList.remove('active');
+    renderCourses('my', document.getElementById('courseSearch').value);
+});
+
 // Initial Load
 renderCourses();
 
