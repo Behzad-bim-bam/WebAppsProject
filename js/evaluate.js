@@ -55,10 +55,10 @@ document.querySelectorAll('.course-card').forEach(card => {
         const course = courses[index];
 
         window.location.href =
-            `CourseDetail.html?name=${encodeURIComponent(course.name)}&instructor=${encodeURIComponent(course.instructor)}&credits=${course.credits}&grade=${course.average}`;
+            `GradeTracker.html?name=${encodeURIComponent(course.name)}&instructor=${encodeURIComponent(course.instructor)}&credits=${course.credits}&grade=${course.average}`;
     });
 });
 
 function openCourse(name) {
-    window.location.href = `CourseGrade.html?course=${encodeURIComponent(name)}`;
+    window.location.href = `GradeTracker.html?course=${encodeURIComponent(name)}`;
 }
