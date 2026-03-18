@@ -58,3 +58,4 @@ document.getElementById('addCourseForm').addEventListener('submit', function(e) 
 
 // Initial Load
 renderMyCourses();
+
