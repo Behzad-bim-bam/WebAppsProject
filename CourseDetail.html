@@ -64,6 +64,9 @@
                     <button class="nav-link" onclick="showTab('announcements')">Announcements</button>
                 </li>
                 <li class="nav-item">
+                    <button class="nav-link" onclick="showTab('faqs')">FAQs</button>
+                </li>
+                <li class="nav-item">
                     <button class="nav-link" onclick="showTab('classmates')">Classmates</button>
                 </li>
             </ul>
@@ -179,6 +182,20 @@
                 </div>
             </div>
 
+            <div id="faqs" class="tab-content-section d-none">
+
+                <!-- CREATE POST -->
+                <div class="card p-3 mb-4">
+                    <textarea id="newPostText" class="form-control mb-2"
+                        placeholder="Ask a question or share something..."></textarea>
+                    <button class="btn btn-primary" onclick="addPost()">Post</button>
+                </div>
+
+                <!-- POSTS -->
+                <div id="faqsContainer"></div>
+
+            </div>
+
             <!-- CLASSMATES -->
             <div id="classmates" class="tab-content-section d-none">
 
@@ -207,7 +224,7 @@
 
         </main>
     </div>
-    <script src ="js/coursedetail.js"></script>
+    <script src="js/coursedetail.js"></script>
 </body>
 
 </html>
