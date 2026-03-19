@@ -36,7 +36,10 @@ instructorData.courses.forEach(course => {
                 <h6 class="fw-bold mb-0">${course.uploads}</h6>
                 <small class="text-muted">Uploads</small>
             </div>
-            <a href="InstructorMaterials.html?course=${encodeURIComponent(course.title)}" class="btn btn-outline-primary btn-sm rounded-pill px-4">Manage</a>
+            <div class="d-flex gap-2">
+                <a href="InstructorSyllabus.html?course=${encodeURIComponent(course.title)}" class="btn btn-outline-primary btn-sm rounded-pill px-3">Syllabus</a>
+                <a href="InstructorMaterials.html?course=${encodeURIComponent(course.title)}" class="btn btn-primary btn-sm rounded-pill px-3">Manage</a>
+            </div>
         </div>
     `;
 });
@@ -76,6 +79,29 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
 
 document.getElementById('examForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Exam scheduled successfully!');
+    const name = document.getElementById('examName').value;
+    const date = document.getElementById('examDate').value;
+    const course = document.getElementById('examCourse').value;
+    const weight = document.getElementById('examWeight').value;
+    const topic = document.getElementById('examTopic').value;
+    const isPublished = document.getElementById('publishToStudents').checked;
+
+    // Save to localStorage for calendars
+    const newEvent = {
+        title: `${course}: ${name} (${weight}%)`,
+        start: date,
+        color: course.includes('Calculus') ? '#ed8936' : '#1a365d',
+        extendedProps: {
+            topic: topic,
+            published: isPublished
+        }
+    };
+
+    let events = JSON.parse(localStorage.getItem('courseLinkEvents')) || [];
+    events.push(newEvent);
+    localStorage.setItem('courseLinkEvents', JSON.stringify(events));
+
+    alert(`${name} scheduled successfully!\nCourse: ${course}\nDate: ${date}\nTopic: ${topic}\nWeight: ${weight}%\nPublished to Student Calendars: ${isPublished ? 'Yes' : 'No'}`);
     bootstrap.Modal.getInstance(document.getElementById('createExamModal')).hide();
+    this.reset();
 });
