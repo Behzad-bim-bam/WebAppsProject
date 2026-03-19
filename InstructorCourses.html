@@ -29,7 +29,8 @@
             <nav class="nav flex-column">
                 <a class="nav-link" href="Home.html">Home</a>
                 <a class="nav-link" href="InstructorDashboard.html">Dashboard</a>
-                <a class="nav-link active" href="InstructorCourses.html">Manage Courses</a>
+                <a class="nav-link" href="InstructorCourses.html">Manage Courses</a>
+                <a class="nav-link" href="InstructorSyllabus.html">Edit Syllabus</a>
                 <a class="nav-link" href="InstructorMaterials.html">Upload Materials</a>
                 <a class="nav-link" href="InstructorCalendar.html">Exam Calendar</a>
             </nav>
@@ -92,8 +93,8 @@
                             <div class="mt-auto">
                                 <p class="small text-muted mb-2">👥 ${course.students} Students Enrolled</p>
                                 <div class="d-flex gap-2">
+                                    <a href="InstructorSyllabus.html?course=${course.code}" class="btn btn-sm btn-outline-primary flex-grow-1">Syllabus</a>
                                     <a href="InstructorMaterials.html?course=${course.code}" class="btn btn-sm btn-outline-primary flex-grow-1">Materials</a>
-                                    <button class="btn btn-sm btn-primary flex-grow-1">Students</button>
                                 </div>
                             </div>
                         </div>
