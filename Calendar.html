@@ -110,14 +110,13 @@
             // =========================
             let events = [];
 
+            // Add hardcoded syllabus data
             if (courseName && allAssessments[courseName]) {
-                // Show only one course
                 events = allAssessments[courseName].map(item => ({
                     title: `${item.title} (${item.weight}%)`,
                     start: item.date
                 }));
             } else {
-                // Show ALL courses
                 Object.keys(allAssessments).forEach(course => {
                     allAssessments[course].forEach(item => {
                         events.push({
@@ -127,6 +126,19 @@
                     });
                 });
             }
+
+            // =========================
+            // LOAD INSTRUCTOR EVENTS
+            // =========================
+            const instructorEvents = JSON.parse(localStorage.getItem('courseLinkEvents')) || [];
+            instructorEvents.forEach(evt => {
+                // Only show published events for the student, or specific course
+                if (evt.extendedProps && evt.extendedProps.published) {
+                    if (!courseName || evt.title.includes(courseName)) {
+                        events.push(evt);
+                    }
+                }
+            });
 
             // =========================
             // INIT CALENDAR
