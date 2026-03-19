@@ -74,11 +74,12 @@
     <div class="app-container">
         <aside class="app-sidebar">
             <nav class="nav flex-column">
+                <a class="nav-link" href="Home.html">Home</a>
                 <a class="nav-link" href="InstructorDashboard.html">Dashboard</a>
                 <a class="nav-link" href="InstructorCourses.html">Manage Courses</a>
                 <a class="nav-link active" href="InstructorSyllabus.html">Edit Syllabus</a>
                 <a class="nav-link" href="InstructorMaterials.html">Upload Materials</a>
-                <a class="nav-link" href="Notifications.html">Notifications</a>
+                <a class="nav-link" href="InstructorCalendar.html">Exam Calendar</a>
             </nav>
         </aside>
 
@@ -94,21 +95,15 @@
                 </div>
             </div>
 
-            <div class="selection-bar mb-4 shadow-sm">
-                <div class="select-group">
-                    <label class="form-label small fw-bold text-muted">Select Course</label>
-                    <select class="form-select" id="course-select">
-                        <option value="CMP120">Intro to Programming (CMP120)</option>
-                        <option value="MTH104">Calculus II (MTH104)</option>
-                    </select>
-                </div>
-
-                <div class="select-group section-small">
-                    <label class="form-label small fw-bold text-muted">Section</label>
-                    <select class="form-select" id="section-select">
-                        <option>1</option>
-                        <option>2</option>
-                    </select>
+            <div class="card p-4 mb-4 shadow-sm border-0">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <label class="form-label small fw-bold text-muted">Select Course to Manage</label>
+                        <select class="form-select" id="courseSelect">
+                            <option value="CMP120">Intro to Programming (CMP120)</option>
+                            <option value="MTH104">Calculus II (MTH104)</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
